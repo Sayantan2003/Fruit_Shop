@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/FRUIT SHOP/checkout.css">
+    <title>CHECKOUT</title>
+</head>
+<body>
+    <nav id="navbar" data-aos="fade-down">
+        <div class="nav-container container">
+            <div id="logo">
+                <img src="/FRUIT SHOP/IMAGES/logo.png">
+            </div>
+            <div id="navbar-links">
+                <ul>
+                    <li><a href="/FRUIT SHOP/fruit.html#home">HOME</a></li>
+                    <li><a href="/FRUIT SHOP/fruit.html#about">ABOUT</a></li>
+                    <li><a href="/FRUIT SHOP/fruit.html#deal">DEAL</a></li>
+                    <li><a href="/FRUIT SHOP/fruit.html#shop">SHOP</a></li>
+                    <li><a href="/FRUIT SHOP/fruit.html#contact">CONTACTS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="cart-home">
+        <div data-aos="zoom-in" class="column">
+            <p>FRESH & ORGANIC FRUITS</p>
+            <h1>Check Out Products</h1>
+        </div>
+    </section>
+
+    <section id="bill" class="container">
+        <div class="bil-container">
+            <div id="address">
+                <div class="address-box">
+                    <i class="fa-solid fa-circle-chevron-down" id="icon1"></i>
+                    <span>Address</span>
+                </div>
+                <div class="address-table">
+                    <form action="checkout.php" class="form1" name="address-table">
+                        <input type="text" name="customerName" placeholder="Name" class="address-text" id="customerName" required>
+                        <input type="email" name="customerEmail" placeholder="Email" class="address-text" required>
+                        <input type="number" name="customerNumber" placeholder="Phone" class="address-text" required>
+                        <input type="text" name="customerAddress" placeholder="Address" class="address-text" id="customerAddress" required>
+                        <textarea name="customerMessage" cols="30" rows="10" placeholder="Message (Optional)" class="address-text"></textarea>
+                    </form>
+                </div>
+            </div>
+            <div id="payment-mode">
+                <div class="payment-box">
+                    <i class="fa-solid fa-circle-chevron-down" id="icon2"></i>
+                    <span>Payment Mode</span>
+                </div>
+                <div class="payment-checkbox">
+                    <form action="checkout.php" class="form2" name="payment-checkbox">
+                        <input type="radio" name="paymentMode" value="cash" class="radio-btn">Cash on Delivery
+                        <input type="radio" name="paymentMode" value="upi" class="radio-btn">UPI
+                        <input type="radio" name="paymentMode" value="cards" class="radio-btn">Credit/Debit Cards
+                        <input type="radio" name="paymentMode" value="net-banking" class="radio-btn">Net Banking
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bill-table">
+            <div class="bill-table-container">
+                <div class="bill-row grayBg boldFont font20">
+                    <div class="bill-cell product">
+                        <span>Product</span>
+                    </div>
+                    <div class="bill-cell total">
+                        <span>Total</span>
+                    </div>
+                </div>
+                <div class="bill-row">
+                    <div class="bill-cell product">
+                        <span>Subtotal</span>
+                    </div>
+                    <div class="bill-cell total">
+                        <span class="subtotal-cell">00</span>
+                    </div>
+                </div>
+                <div class="bill-row">
+                    <div class="bill-cell product">
+                        <span>Shipping</span>
+                    </div>
+                    <div class="bill-cell total">
+                        <span class="shipping-cell">00</span>
+                    </div>
+                </div>
+                <div class="bill-row discount-bar">
+                    <div class="bill-cell product">
+                        <span>Discount</span>
+                    </div>
+                    <div class="bill-cell total">
+                        <span class="discount-cell">00</span>
+                    </div>
+                </div>
+                <div class="bill-row">
+                    <div class="bill-cell product">
+                        <span>Total</span>
+                    </div>
+                    <div class="bill-cell total">
+                        <span class="total-cell">00</span>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="place-order-btn">Place Order</button>
+            <a href="/FRUIT SHOP/bill.html"><button type="submit" class="see-bill">See Bill</button></a>
+            
+            <div id="coupon">
+                <h2>Apply Coupon</h2>
+                <input type="text" placeholder="Enter coupon" class="coupon-input">
+                <p class="remove">x</p>
+                <button class="orangeBtn bill-apply">Apply</button>
+            </div>
+            <div class="coupon-container">
+                <div class="coupon-heading grayBg boldFont font20">
+                    <i class="fa-solid fa-circle-chevron-down" id="icon3"></i>    
+                    <span>Available Coupons</span>
+                </div>
+                <div class="coupon-optipns">
+                    <div class="coupon-table">
+                        <button class="coupon-box displayNone">
+                            <h3 class="coupon-tag">80@CashOnDelivery</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </button>
+                        <button class="coupon-box displayNone">
+                            <h3 class="coupon-tag">150@UPI</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </button>
+                        <button class="coupon-box displayNone">
+                            <h3 class="coupon-tag">180@CreditDebitCard</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </button>
+                        <button class="coupon-box displayNone">
+                            <h3 class="coupon-tag">100@NetBanking</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </button>
+                        <button class="coupon-box">
+                            <h3 class="coupon-tag">60@General</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="business-partners">
+        <div class="container">
+            <img src="/FRUIT SHOP/IMAGES/1.png">
+            <img src="/FRUIT SHOP/IMAGES/2.png">
+            <img src="/FRUIT SHOP/IMAGES/3.png">
+            <img src="/FRUIT SHOP/IMAGES/4.png">
+            <img src="/FRUIT SHOP/IMAGES/5.png">
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container" id="footer-container">
+            <div class="footer-box">
+                <h2>About Us</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident soluta quo neque praesentium incidunt accusamus consequatur omnis maxime veniam voluptates?</p>
+            </div>
+            <div class="footer-box" id="footer-address">
+                <h2>Get in Touch</h2>
+                <p>34/8, EastHukupara, Gifirtok, Sadan</p>
+                <p>support@gmail.com</p>
+                <p>+00 111 222 3333</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h2>Pages</h2>
+                <ul>
+                    <li><a href="/FRUIT SHOP/fruit.html#home">HOME</a></li>
+                    <li><a href="/FRUIT SHOP/fruit.html#about">ABOUT</a></li>
+                    <li><a href="/FRUIT SHOP/fruit.html#deal">DEAL</a></li>
+                    <li><a href="/FRUIT SHOP/fruit.html#shop">SHOP</a></li>
+                    <li><a href="/FRUIT SHOP/fruit.html#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h2>Subscribe</h2>
+                <p>Subscribe to our mailing list to get the latest updates.</p>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Email">
+                    <button type="submit"><i class="fa-solid fa-paper-plane fa-xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <p id="copyright">Copyright &copy; 2023 - <span class="orange">Sayantan Halder</span>, All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+          duration: 1200,
+          offset: 180,
+        });
+    </script>
+
+    <script src="/FRUIT SHOP/checkout.js"></script>
+</body>
+</html>
